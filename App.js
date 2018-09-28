@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
+import openSocket from 'socket.io-client';
 
 
 function Square(props) {
@@ -49,7 +50,7 @@ class Game extends React.Component {
 
   componentDidMount() {
     const self = this;
-    this.socket = io.connect('http://localhost:5000');
+    this.socket = openSocket('http://localhost:5000');
     this.socket.on('connect', function() {
       self.socket.emit('hi');
     });
@@ -244,25 +245,25 @@ const styles = StyleSheet.create({
   margin5: {margin: 5},
   padding5: {padding: 5},
   boardRow: {
-    clear: 'both',
-    content: "",
-    display: 'table'
+    // clear: 'both',
+    // content: "",
+    // display: 'table'
   },
   gameInfo: {
-    fontWeight: 'bold'
+    // fontWeight: 'bold'
   },
   square: {
-    background: '#fff',
-    border: '1px solid #999',
-    float: 'left',
-    fontSize: 24,
-    fontWeight: 'bold',
-    lineHeight: 34,
-    height: 34,
-    marginRight: -1,
-    marginTop: -1,
-    padding: 0,
-    textAlign: 'center',
-    width: 34
+    // background: '#fff',
+    // border: '1px solid #999',
+    // float: 'left',
+    // fontSize: 24,
+    // fontWeight: 'bold',
+    // lineHeight: 34,
+    // height: 34,
+    // marginRight: -1,
+    // marginTop: -1,
+    // padding: 0,
+    // textAlign: 'center',
+    // width: 34
   }
 });

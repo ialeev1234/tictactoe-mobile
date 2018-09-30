@@ -6,6 +6,11 @@
 # dependencies
 node_modules
 
+app.json
+App.test.js
+package.json
+package-lock.json
+
 # misc
 .env.local
 .env.development.local
